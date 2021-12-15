@@ -1,0 +1,36 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blueviolet;
+    text-align: center;
+    background-color: burlywood;
+    padding: 5px;
+}
+.example_main_div {
+    height: 320px;
+    width: 33.3%;
+    border: 3px solid coral;
+}
+.mavzu {
+    width: 300px;
+    height: 30px;
+    border: 2px solid chartreuse;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+}
+.matn {
+    width: 300px;
+    height: 228px;
+    border: 2px solid chartreuse;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+}
+.muallif {
+    width: 300px;
+    height: 30px;
+    border: 2px solid chartreuse;
+    text-align: right;
+    margin: auto;
+    padding: 3px;
+}
