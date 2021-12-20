@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqola kiritish formasi</title>
+    <link rel="stylesheet" href="{% static 'themain/css/create.css' %}">
+</head>
+<body>
+  <div class="createpage">
+      <header>Maqola kiritish formasi</header>
+      <!-- <form method="post">
+          {% csrf_token %}
+          {{ form.title }}
+          {{ form.matn }}
+          {{ form.muallif }}
+          {{ form.sana }}
+          <button class="tugma" type="submit">Maqolani qo'shish</button>
+
+      </form> -->
+      <form id="form" class="topBefore">
+		
+        <input id="muallif" type="text" placeholder="Muallif">
+        <input id="mavzu" type="text" placeholder="Mavzu">
+        <textarea id="matn" type="text" placeholder="Matn"></textarea>
+        <input id="sana" type="date" placeholder="Sana">
+        <input id="submit" type="submit" value="Maqolani yuklash">
+    
+      </form>
+  </div>  
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Maqolalar</title>
+    <link rel="stylesheet" href="{% static 'themain/css/themain.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Bosh sahifa</a>
+      <a href="{% url 'create' %}">Maqola kiritish</a>
+      <a href="#">Biz xaqimizda</a>
+    </nav>
+  </header>
+    <h1>MAQOLALAR</h1>
+    {% for element in maqolalar %}
+            <div class="example_main_div">
+              <div class="mavzu">{{ element.title }}</div>
+              <div class="matn">{{ element.matn }}</div>
+              <div class="muallif">{{ element.muallif }}</div>
+              <div class="sana">{{ element.sana }}</div>
+            </div>
+    {% endfor %}
+</body>
+</html>
