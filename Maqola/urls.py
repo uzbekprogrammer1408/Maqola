@@ -20,8 +20,12 @@ from django.urls.conf import include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from register.views import register_view
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('themain.urls'))
+    path('', include('themain.urls')),
+    path('register/', register_view, name='register_page')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

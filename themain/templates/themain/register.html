@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish</title>
+    <link rel="stylesheet" href="{% static 'themain/css/register.css' %}">
+</head>
+<body>
+  <form method='post'>
+  {% csrf_token %}
+    <div class="login-wrap">
+        <div class="login-html">
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Kirish</label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Ro'yhatdan o'tish</label>
+          <div class="login-form">
+            <div class="sign-in-htm">
+              <div class="group">
+                <label for="user" class="label">Foydalanuvchi</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Parol</label>
+                <input id="pass" type="password" class="input" data-type="password">
+              </div>
+              <div class="group">
+                <input id="check" type="checkbox" class="check" checked>
+                <label for="check"><span class="icon"></span> Meni ro'yhatdan ot'gan holda saqlang</label>
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Kirish">
+              </div>
+              <div class="hr"></div>
+              <div class="foot-lnk">
+                <a href="#forgot">Parolni unutdingizmi?</a>
+              </div>
+            </div>
+            <div class="sign-up-htm">
+              <div class="group">
+                <label for="user" class="label">Foydalanuvchi</label>
+                {{ form.username }}
+                <!-- <input id="user" type="text" class="input"> -->
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Parol</label>
+                {{ form.password1 }}
+                <!-- <input id="pass" type="password" class="input" data-type="password"> -->
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Parolni takrorlang</label>
+                {{ form.password2 }}
+                <!-- <input id="pass" type="password" class="input" data-type="password"> -->
+              </div>
+              <div class="group">
+                <label for="pass" class="label">E-mail</label>
+                {{ form.email }}
+                <!-- <input id="pass" type="text" class="input"> -->
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Ro'yhatdan o'tish">
+              </div>
+              <div class="hr"></div>
+              <div class="foot-lnk">
+                <label for="tab-1">A'zomisiz?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

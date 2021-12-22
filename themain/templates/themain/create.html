@@ -21,15 +21,15 @@
           <button class="tugma" type="submit">Maqolani qo'shish</button>
 
       </form> -->
-      <form id="form" class="topBefore">
-		
-        <input id="muallif" type="text" placeholder="Muallif">
-        <input id="mavzu" type="text" placeholder="Mavzu">
-        <textarea id="matn" type="text" placeholder="Matn"></textarea>
-        <input id="sana" type="date" placeholder="Sana">
-        <input id="submit" type="submit" value="Maqolani yuklash">
-    
-      </form>
+      <form method="post" id="form" class="topBefore">
+        {% csrf_token %}
+        {{ form.muallif }}<br>
+        {{ form.title }}<br>
+        {{ form.matn }}<br>
+        {{ form.sana }}<br>
+        <span>{{ error }}</span>
+		    <input id="submit" type="submit" value="Maqolani yuklash">
+          </form>
   </div>  
 </body>
 </html>
